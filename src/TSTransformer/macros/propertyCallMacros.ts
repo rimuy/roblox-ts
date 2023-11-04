@@ -19,11 +19,12 @@ function makeMathMethod(operator: luau.BinaryOperator): PropertyCallMacro {
 	};
 }
 
-const OPERATOR_TO_NAME_MAP = new Map<luau.BinaryOperator, "add" | "sub" | "mul" | "div">([
+const OPERATOR_TO_NAME_MAP = new Map<luau.BinaryOperator, "add" | "sub" | "mul" | "div" | "idiv">([
 	["+", "add"],
 	["-", "sub"],
 	["*", "mul"],
 	["/", "div"],
+	["//", "idiv"],
 ]);
 
 function makeMathSet(...operators: Array<luau.BinaryOperator>) {

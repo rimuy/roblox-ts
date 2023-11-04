@@ -51,7 +51,7 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"@roblox-ts/luau-ast": "^1.0.10",
+		"@roblox-ts/luau-ast": "github:rimuy/luau-ast#idiv",
 		"@roblox-ts/rojo-resolver": "^1.0.6",
 		"chokidar": "^3.5.3",
 		"fs-extra": "^11.1.1",

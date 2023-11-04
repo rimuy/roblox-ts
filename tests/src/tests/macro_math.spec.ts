@@ -229,6 +229,26 @@ export = () => {
 		expect(c.Z).to.equal(3);
 	});
 
+	it("should support Vector3 // Vector3 = Vector3", () => {
+		const a = new Vector3(5, 7, 8);
+		const b = new Vector3(3, 3, 3);
+		const c = a.idiv(b);
+		expect(typeIs(c, "Vector3")).to.equal(true);
+		expect(c.X).to.equal(1);
+		expect(c.Y).to.equal(2);
+		expect(c.Z).to.equal(2);
+	});
+
+	it("should support Vector3 // number = Vector3", () => {
+		const a = new Vector3(4, 5, 7);
+		const b = 3;
+		const c = a.idiv(b);
+		expect(typeIs(c, "Vector3")).to.equal(true);
+		expect(c.X).to.equal(1);
+		expect(c.Y).to.equal(1);
+		expect(c.Z).to.equal(2);
+	});
+
 	it("should support Vector3int16 + Vector3int16 = Vector3int16", () => {
 		const a = new Vector3int16(1, 2, 3);
 		const b = new Vector3int16(4, 5, 6);
